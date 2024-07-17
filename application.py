@@ -9,7 +9,7 @@ def home():
 
 
 @application.route('/example')
-def home():
+def example():
     return {"user_name": "Cal Dev"}
 
 
