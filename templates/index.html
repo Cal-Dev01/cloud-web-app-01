@@ -9,6 +9,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            padding-top: 70px; /* Adjust this if necessary */
         }
         .logo {
             width: 100px;
@@ -42,9 +43,16 @@
             font-size: 2.5rem;
             z-index: 2;
         }
+        .banner-text .btn {
+            margin-top: 20px;
+        }
         .navbar {
             background: url('https://pbs.twimg.com/ext_tw_video_thumb/1806295544261652481/pu/img/DEW-DyJt5waAJDu2?format=jpg&name=large') no-repeat center center;
             background-size: cover;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
         .navbar::before {
             content: '';
@@ -125,7 +133,7 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg fixed-top">
     <a class="navbar-brand" href="#">Tech Peers @ Ulaw</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -160,6 +168,19 @@
 <div class="banner" id="home">
     <div class="banner-text">
         <h1>Tech Peers @ Ulaw</h1>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">Join Us</button>
+    </div>
+</div>
+
+<!-- YouTube Video Section -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2>Watch Our Introduction Video</h2>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/HHmFY4CD1to" title="What is Cloud Computing? An Explainer for Business Leaders | Amazon Web Services" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -273,6 +294,37 @@
             <p>&copy; 2024 Tech Peers @ Ulaw. All Rights Reserved.</p>
         </div>
     </div>
+</div>
+
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registerModalLabel">Join Tech Peers @ Ulaw</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label for="modal-name">Name</label>
+                <input type="text" class="form-control" id="modal-name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="modal-email">Email address</label>
+                <input type="email" class="form-control" id="modal-email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="modal-message">Why do you want to join?</label>
+                <textarea class="form-control" id="modal-message" rows="3" placeholder="Enter your reason"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

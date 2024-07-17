@@ -1,0 +1,5 @@
+region        = "eu-west-2"
+aws_access_key = ""
+aws_secret_key = ""
+application_name = "caleb-app-02"
+environment_name = "caleb-02-env"
