@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Peers @ Ulaw</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .banner {
+            position: relative;
+            background: url('https://www.unidirection.com/wp-content/uploads/2017/11/the.jpg') no-repeat center center;
+            background-size: cover;
+            height: 500px;
+        }
+        .banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 2.5rem;
+            z-index: 2;
+        }
+        .navbar {
+            background: url('https://pbs.twimg.com/ext_tw_video_thumb/1806295544261652481/pu/img/DEW-DyJt5waAJDu2?format=jpg&name=large') no-repeat center center;
+            background-size: cover;
+        }
+        .navbar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .navbar-brand, .nav-link, .contact-info {
+            color: white !important;
+            position: relative;
+            z-index: 2;
+        }
+        .contact-info i {
+            margin-right: 5px;
+        }
+        .btn-primary {
+            background-color: #91278f;
+            border-color: #91278f;
+        }
+        .btn-primary:hover {
+            background-color: #6A1B9A;
+            border-color: #6A1B9A;
+        }
+        .card {
+            border: 1px solid #E0E0E0;
+            margin-bottom: 20px;
+        }
+        .card-title {
+            color: #91278f;
+        }
+        .container h2 {
+            color: #91278f;
+        }
+        .footer {
+            background: url('https://pbs.twimg.com/ext_tw_video_thumb/1806295544261652481/pu/img/DEW-DyJt5waAJDu2?format=jpg&name=large') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+        }
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+        .footer .container {
+            position: relative;
+            z-index: 2;
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .footer-grid .card {
+            margin: 10px;
+            flex: 1 1 calc(20% - 20px);
+        }
+        .footer-grid .card img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+        .footer-text {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">Tech Peers @ Ulaw</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#events">Events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#news">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+        <span class="navbar-text contact-info ml-auto">
+            <i class="fas fa-phone-alt"></i> +1-234-567-8901 &nbsp; | &nbsp; <i class="fas fa-envelope"></i> info@techpeersulaw.com
+        </span>
+    </div>
+</nav>
+
+<!-- Logo -->
+<div class="container text-center mt-5">
+    <img src="https://play-lh.googleusercontent.com/mLegVtzKIKoSIR8rD69tav_EZLFnGJfjazEQNLgp4QcfWC5iEPpjOD5p1Y8h8TWCV97k=w240-h480-rw" alt="Tech Peers @ Ulaw Logo" class="logo">
+</div>
+
+<!-- Banner -->
+<div class="banner" id="home">
+    <div class="banner-text">
+        <h1>Tech Peers @ Ulaw</h1>
+    </div>
+</div>
+
+<!-- Upcoming Events Section -->
+<div class="container mt-5" id="events">
+    <h2>Upcoming Events</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Hackathon 2024</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">August 5-7, 2024</h6>
+                    <p class="card-text">Join us for a 48-hour coding marathon to solve real-world problems.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Tech Talk: AI and Future</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">September 12, 2024</h6>
+                    <p class="card-text">A seminar on the impact of AI on future technologies.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Workshop: Cloud Computing</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">October 22, 2024</h6>
+                    <p class="card-text">Hands-on workshop on cloud services and deployment strategies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent News Section -->
+<div class="container mt-5" id="news">
+    <h2>Recent News</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">New Club President</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">June 15, 2024</h6>
+                    <p class="card-text">We are excited to announce our new club president, Alex Johnson, who will lead us into a new era of innovation.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Successful Alumni Meet</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">July 2, 2024</h6>
+                    <p class="card-text">Our recent alumni meet was a grand success, with over 200 participants sharing their experiences.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Launch of New Website</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">July 10, 2024</h6>
+                    <p class="card-text">We have launched our new website to keep everyone updated on the latest events and news.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Form Section -->
+<div class="container mt-5 mb-5" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <h2>Explore More</h2>
+        <div class="footer-grid">
+            <div class="card">
+                <img src="https://uk.campusclothing.com/Uploads/Products/Images/Prod_Main/6058.jpg" class="card-img-top" alt="Campus Image 1">
+            </div>
+            <div class="card">
+                <img src="https://uk.campusclothing.com/Uploads/Products/Images/Prod_Main/6060.jpg" class="card-img-top" alt="Campus Image 2">
+            </div>
+            <div class="card">
+                <img src="https://uk.campusclothing.com/Uploads/Products/Images/Prod_Main/6062.jpg" class="card-img-top" alt="Campus Image 3">
+            </div>
+            <div class="card">
+                <img src="https://i.scdn.co/image/ab6765630000ba8a73447fd7cc32cd2f9af6a57d" class="card-img-top" alt="Campus Image 4">
+            </div>
+        </div>
+        <div class="footer-text">
+            <p>&copy; 2024 Tech Peers @ Ulaw. All Rights Reserved.</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>
