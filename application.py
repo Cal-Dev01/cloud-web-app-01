@@ -8,5 +8,10 @@ def home():
     return render_template('index.html')
 
 
+@application.route('/example')
+def home():
+    return {"user_name": "Cal Dev"}
+
+
 if __name__ == '__main__':
     application.run(debug=True)
